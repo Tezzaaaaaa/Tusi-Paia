@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#142d29">
+<meta name="description" content="Tusi Paia is a free, illustrated, bilingual (English and Gagana Samoa) guide to the history of the Bible, from ancient scrolls to the Samoan Bible.">
+<meta property="og:title" content="Tusi Paia — The Bible through time">
+<meta property="og:description" content="An illustrated, bilingual guide to the Bible's history, manuscripts, translations and the Samoan story.">
+<meta property="og:type" content="website">
+<title>Tusi Paia — The Bible through time</title>
+<style>
+:root{color-scheme:light;--forest:#142d29;--forest2:#203e37;--paper:#f4f0e6;--white:#fffdf8;--gold:#b88d4d;--gold2:#d3b47b;--rust:#a9513e;--ink:#202b27;--muted:#68736d;--line:#ddd6c8;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.flag{height:5px;background:linear-gradient(90deg,#173d35 0 33.33%,#fff 33.33% 66.66%,#b34b43 66.66%)}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+header.top{position:sticky;top:0;z-index:20;background:#f4f0e6ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:17px;letter-spacing:.14em;font-weight:bold}
+.seal{height:34px;width:34px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:17px}
+nav{display:flex;gap:26px;align-items:center;font:13px var(--sans);color:#52615a}
+nav a{text-decoration:none}nav a:hover{color:var(--rust)}
+.btn{display:inline-block;padding:14px 22px;text-decoration:none;font:600 13px var(--sans);letter-spacing:.03em;border:1px solid transparent;border-radius:4px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--gold2);color:#1d332d}
+.btn.primary:hover{background:#dcc08a}
+.btn.ghost{border-color:#ffffff55;color:#fff}
+.btn.ghost:hover{background:#ffffff14}
+.btn.dark{background:var(--forest);color:#fff;padding:11px 18px}
+.eyebrow{font:600 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.kicker{font:600 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#9a7541}
+
+/* hero */
+.hero{background:var(--forest);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:640px;height:640px;border:1px solid #ffffff1c;border-radius:50%;right:-160px;top:-200px;box-shadow:0 0 0 50px #ffffff08,0 0 0 105px #ffffff05}
+.hero .wrap{position:relative;padding-top:96px;padding-bottom:104px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+h1{font-size:clamp(46px,7.4vw,92px);font-weight:normal;line-height:1;letter-spacing:-.045em;margin:22px 0}
+h1 em{font-style:italic;color:var(--gold2)}
+.hero p.lead{font:18px/1.75 var(--sans);color:#d5ded9;max-width:560px;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.facts{display:flex;gap:30px;flex-wrap:wrap;margin-top:44px;font:12px var(--sans);color:#a9b8b1}
+.facts b{display:block;font:normal 28px var(--serif);color:#fff;letter-spacing:-.02em}
+.verse{background:#ffffff0d;border:1px solid #ffffff22;border-radius:6px;padding:28px;position:relative;z-index:1}
+.verse .tag{font:600 10px var(--sans);letter-spacing:.2em;color:var(--gold2)}
+.verse q{display:block;font-size:22px;line-height:1.4;margin:10px 0 4px;quotes:none}
+.verse small{display:block;font:12px var(--sans);color:#9fb0a8}
+.verse hr{border:0;border-top:1px solid #ffffff1f;margin:22px 0}
+
+/* sections */
+section{padding:84px 0}
+h2{font-size:clamp(32px,4vw,50px);font-weight:normal;line-height:1.08;letter-spacing:-.03em;margin:12px 0 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:40px}
+.head p{max-width:460px;font:14px/1.8 var(--sans);color:var(--muted);margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:28px}
+.card .n{font:600 11px var(--sans);letter-spacing:.12em;color:var(--rust)}
+.card h3{font-size:23px;font-weight:normal;margin:14px 0 10px;line-height:1.2}
+.card p{font:14px/1.75 var(--sans);color:var(--muted);margin:0}
+
+/* timeline strip */
+.strip{background:var(--forest);color:#fff}
+.strip h2{color:#fff}.strip .head p{color:#b9c8c1}
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #ffffff2a;margin-top:10px}
+.rail div{padding:26px 22px 0 0;position:relative}
+.rail div:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold2)}
+.rail .d{font:600 11px var(--sans);letter-spacing:.1em;color:var(--gold2)}
+.rail h3{font-size:20px;font-weight:normal;margin:10px 0 8px}
+.rail p{font:13px/1.7 var(--sans);color:#b9c8c1;margin:0}
+.strip .more{margin-top:44px}
+
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px}
+.panel.sm{background:#fbf3e2;border-color:#e6d6b4}
+.panel .lab{font:600 10px var(--sans);letter-spacing:.2em;color:var(--rust)}
+.panel q{display:block;font-size:26px;line-height:1.35;margin:14px 0 10px;quotes:none}
+.panel small{font:12px var(--sans);color:var(--muted)}
+.note{margin-top:14px;font:14px/1.8 var(--sans);color:var(--muted);max-width:760px}
+
+/* samoa */
+.samoa{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.samoa p{font:15px/1.85 var(--sans);color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.steps li{padding:0 0 26px 26px;position:relative}
+.steps li:before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--rust)}
+.steps b{font:600 11px var(--sans);letter-spacing:.1em;color:var(--rust)}
+.steps h3{font-size:21px;font-weight:normal;margin:6px 0 6px}
+.steps p{margin:0;font:14px/1.75 var(--sans)}
+
+/* trust */
+.trust{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust .grid3 .card{background:var(--paper)}
+
+/* cta */
+.cta{background:var(--forest);color:#fff;text-align:center;padding:96px 0}
+.cta h2{color:#fff;max-width:680px;margin:14px auto 18px}
+.cta p{font:16px/1.75 var(--sans);color:#c5d2cc;max-width:520px;margin:0 auto 32px}
+.cta .actions{justify-content:center}
+footer{background:#0f221f;color:#8fa299;font:12px/1.7 var(--sans);padding:34px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c5d2cc}
+
+@media(max-width:900px){
+ nav a:not(.btn){display:none}
+ .hero .wrap{grid-template-columns:1fr;padding-top:64px;padding-bottom:72px}
+ .head{flex-direction:column;align-items:flex-start;gap:16px}
+ .grid3,.compare,.samoa{grid-template-columns:1fr}
+ .rail{grid-template-columns:1fr;border-top:0;border-left:1px solid #ffffff2a;margin-left:4px}
+ .rail div{padding:0 0 26px 24px}.rail div:before{top:6px;left:-5px}
+ section{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="flag"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tusi Paia home"><span class="seal">✦</span>TUSI PAIA</a>
+    <nav aria-label="Primary">
+      <a href="#inside">Inside</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#compare">Compare</a>
+      <a href="#samoa">Samoa</a>
+      <a class="btn dark" href="index.html">Open the guide</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">A bilingual historical companion · English / Gagana Samoa</div>
+        <h1>The Bible, <em>through time.</em></h1>
+        <p class="lead">Explore how biblical writings were composed, copied, gathered, translated and carried across languages — from the ancient eastern Mediterranean to the Samoan islands.</p>
+        <div class="actions">
+          <a class="btn primary" href="index.html#history">Explore the history →</a>
+          <a class="btn ghost" href="index.html#compare">Compare English &amp; Samoan</a>
+        </div>
+        <div class="facts">
+          <div><b>9</b>timeline milestones</div>
+          <div><b>2</b>languages side by side</div>
+          <div><b>5</b>Samoan Bible milestones</div>
+        </div>
+      </div>
+      <aside class="verse" aria-label="Sample passage">
+        <span class="tag">ENGLISH · KJV</span>
+        <q>“In the beginning God created the heaven and the earth.”</q>
+        <small>Genesis 1:1</small>
+        <hr>
+        <span class="tag">GAGANA SAMOA · SOV</span>
+        <q>“Na faia e le Atua le lagi ma le lalolagi i le amataga.”</q>
+        <small>Kenese 1:1</small>
+      </aside>
+    </div>
+  </div>
+
+  <section id="inside">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker">What's inside</div><h2>One collection.<br>Many centuries.</h2></div>
+        <p>The Bible is a library of writings, not a single book written at one moment. This guide separates historical evidence from religious interpretation, and is free, with no sign-up.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><span class="n">01</span><h3>A timeline of the Bible</h3><p>From the Hebrew scriptures and the Septuagint to Jerome's Vulgate, Gutenberg, Tyndale and the King James Version.</p></div>
+        <div class="card"><span class="n">02</span><h3>From scroll to book</h3><p>Illustrated diagrams showing how scrolls gave way to the codex, and why the material form mattered.</p></div>
+        <div class="card"><span class="n">03</span><h3>One passage, two languages</h3><p>Selectable English and Samoan passages side by side, with translation commentary on word order and style.</p></div>
+        <div class="card"><span class="n">04</span><h3>The Bible in Sāmoa</h3><p>The London Missionary Society translation work, early printed portions, complete editions, revisions and contemporary translation.</p></div>
+        <div class="card"><span class="n">05</span><h3>Canon differences</h3><p>How Jewish, Protestant, Catholic and Eastern Orthodox traditions understand the contents of scripture.</p></div>
+        <div class="card"><span class="n">06</span><h3>Trusted sources</h3><p>Links to museum, university-library, scholarly and Bible Society sources so you can check the history yourself.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" id="timeline">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker" style="color:var(--gold2)">The long view</div><h2>Twenty-six centuries,<br>five turning points.</h2></div>
+        <p>Dates are approximate where the evidence does not allow a precise year. The full timeline covers composition, preservation, canon and printing.</p>
+      </div>
+      <div class="rail">
+        <div><span class="d">1ST MILLENNIUM BCE</span><h3>Hebrew scriptures</h3><p>Composed and edited over many centuries.</p></div>
+        <div><span class="d">3RD–2ND CENTURIES BCE</span><h3>Greek translation</h3><p>The Septuagint carries scripture into Greek.</p></div>
+        <div><span class="d">c. 382–405 CE</span><h3>Jerome's Latin Bible</h3><p>The Vulgate becomes hugely influential in the West.</p></div>
+        <div><span class="d">c. 1454–1455</span><h3>Gutenberg's Bible</h3><p>Movable type speeds reproduction.</p></div>
+        <div><span class="d">1611</span><h3>King James Version</h3><p>Drawing on earlier English translations.</p></div>
+      </div>
+      <div class="more"><a class="btn primary" href="index.html#history">See the full timeline →</a></div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker">A bilingual reading</div><h2>Same opening claim,<br>different grammar.</h2></div>
+        <p>English is the King James Version; Samoan is the Samoan Edited Old Version (SOV, 2017). They are not word-for-word equivalents.</p>
+      </div>
+      <div class="compare">
+        <div class="panel"><span class="lab">ENGLISH · KING JAMES VERSION</span><q>“In the beginning God created the heaven and the earth.”</q><small>Genesis 1:1 · KJV, 1611 translation (modern spelling)</small></div>
+        <div class="panel sm"><span class="lab">GAGANA SAMOA · SOV</span><q>“Na faia e le Atua le lagi ma le lalolagi i le amataga.”</q><small>Kenese 1:1 · Bible Society of the South Pacific, 2017</small></div>
+      </div>
+      <p class="note">English opens with “In the beginning”; the Samoan sentence places the action “Na faia” first and closes with “i le amataga”. Translation choices reflect grammar and style, not simple substitution.</p>
+      <p style="margin-top:28px"><a class="btn dark" href="index.html#compare">Try more passages →</a></p>
+    </div>
+  </section>
+
+  <section id="samoa" style="padding-top:0">
+    <div class="wrap samoa">
+      <div>
+        <div class="kicker">The Samoan story</div>
+        <h2>The Bible in Sāmoa</h2>
+        <p>The Samoan Bible emerged through translation, printing, revision and local collaboration. Its history should not be reduced to the work of one missionary or one date — and “the Samoan Bible” does not refer to a single fixed wording.</p>
+        <p><a class="btn dark" href="index.html#samoa">Read the Samoan story →</a></p>
+      </div>
+      <ol class="steps">
+        <li><b>1830s</b><h3>Translation work begins</h3><p>London Missionary Society missionaries begin translating biblical books into Samoan, with several translators involved.</p></li>
+        <li><b>1841</b><h3>Printed portions</h3><p>A Samoan Gospel of John is printed, followed by other portions.</p></li>
+        <li><b>1862</b><h3>First complete Samoan Bible</h3><p>Identified by the Reed Gallery's bibliographic account; some accounts give 1860. The guide notes the discrepancy rather than hiding it.</p></li>
+        <li><b>1884</b><h3>A lasting revision</h3><p>The LMS revision becomes the basis for later reprints.</p></li>
+        <li><b>2009 → PRESENT</b><h3>Contemporary Samoan</h3><p>The Contemporary Samoan New Testament is completed in 2009; work toward a modern Old Testament continues.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker">Accuracy and scope</div><h2>Evidence first.</h2></div>
+        <p>A short educational guide, not a complete Bible text or a critical edition.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><h3>History, not doctrine</h3><p>Historical evidence is kept separate from theological interpretation, and communities' own understanding of the texts is respected.</p></div>
+        <div class="card"><h3>Honest about uncertainty</h3><p>Where scholarship or catalogues disagree, such as 1860 versus 1862, the page says so instead of presenting false certainty.</p></div>
+        <div class="card"><h3>Named editions</h3><p>Every passage names its edition, so you always know exactly which translation you are reading.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="wrap">
+      <div class="eyebrow">Free · No sign-up · Works offline</div>
+      <h2>Read the Bible's story, in two languages.</h2>
+      <p>Plain HTML, CSS and JavaScript — open it in any modern browser.</p>
+      <div class="actions">
+        <a class="btn primary" href="index.html">Open the guide →</a>
+        <a class="btn ghost" href="https://github.com/Tezzaaaaaa/Tusi-Paia">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Tusi Paia · A bilingual (English / Gagana Samoa) historical guide to the Bible.</div>
+    <div><a href="index.html">Guide</a> · <a href="https://github.com/Tezzaaaaaa/Tusi-Paia">GitHub</a></div>
+  </div>
+</footer>
+</body>
+</html>

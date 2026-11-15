@@ -17,6 +17,11 @@ Dates are approximate where scholarship or catalogues differ. In particular, sou
 
 The passage comparison identifies its editions: King James Version (English) and Samoan Edited Old Version (SOV, 2017). It is a short educational comparison, not a complete Bible text or a critical edition. The site distinguishes historical evidence from theological interpretation.
 
+## Pages
+
+- `landing.html` — the project landing page, linking into the guide.
+- `index.html` — the full guide.
+
 ## Run locally
 
 Open `index.html` in a modern browser. The site uses plain HTML, CSS and JavaScript; it has no build step or external runtime dependencies.
